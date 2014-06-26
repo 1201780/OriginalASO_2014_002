@@ -23,23 +23,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	protected void onResume() {
 		// TODO 自動生成されたメソッド・スタブ
 		super.onResume();
-		Button btnENTRY = (Button)findviewByid(R.id.btnENTRY);
+		Button btnENTRY = (Button)findViewById(R.id.btnENTRY);
 		btnENTRY.setOnClickListener(this);
 
-		Button btnMAINTE = (Button)findViewByid(R.id.btnMAINTE);
+		Button btnMAINTE = (Button)findViewById(R.id.btnMAINTE);
 		btnMAINTE.setOnClickListener(this);
 
-		Button btnCHECK = (Button)findViewByid(R.id.btnCHECK);
+		Button btnCHECK = (Button)findViewById(R.id.btnCHECK);
 		btnCHECK.setOnClickListener(this);
 
-	if(sdb == null) {
-			helper = new MySQLiteOpenHelper(getApplicationContext());
-	}
-	try{
-		sdb = helper.getWritableDatabase();
-	}catch(SQLiteException e){
+		if(sdb == null) {
+				helper = new MySQLiteOpenHelper(getApplicationContext());
+		}
+		try{
+			sdb = helper.getWritableDatabase();
+		}catch(SQLiteException e){
 
-		return;
+			return;
 		}
 	}
 	@Override
@@ -50,7 +50,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		switch(v.getId()) {
 			case R.id.btnENTRY:
 
-				EditText etv = (EditText)findviewByid(R.id.edtMsg);
+				EditText etv = (EditText)findViewById(R.id.edtMsg);
 				String inputMsg = etv.getText().toString();
 
 

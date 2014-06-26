@@ -11,7 +11,7 @@ public class HitokotoActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-		setContentview(R.layout.hitokoto_activity);
+		setContentView(R.layout.hitokoto_activity);
 
 	}
 	@Override
